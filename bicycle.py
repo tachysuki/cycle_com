@@ -12,8 +12,11 @@ gps0 = unit.get(unit.GPS, unit.PORTC)
 pole_radius = 6356752.314245 #極半径
 equator_radius = 6378137.0 #赤道半径
 firstloop = True
+global tripmode
 tripmode = True
+global dist_a
 dist_a = 0
+global dist_b
 dist_b = 0
 
 #Trip切り替え

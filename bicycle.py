@@ -82,9 +82,9 @@ while True:
 
     #速度表示
     if len(gps0.speed) > 0 and str(gps0.pos_quality) != 'NO signal':
-        speedtext.set_text(str('{:.1f}'.format(float(gps0.speed)*1/825)) + 'km/h')
+        speedtext.set_text(str('{:.1f}'.format(float(gps0.speed))) + 'km/h')
         if float(gps0.speed) > 0:
-            avespeed = avespeed / 2 + float(gps0.speed)*1.825 / 2
+            avespeed = avespeed / 2 + float(gps0.speed)
 
         avespeedext.set_text('No Signal')
 

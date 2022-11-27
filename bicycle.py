@@ -1,3 +1,4 @@
+
 from m5stack import *
 from m5stack_ui import *
 from uiflow import *
@@ -42,7 +43,7 @@ def cal_distance(latlon_from, latlon_to):
     lat_from = math.radians(latlon_from[0])
     lon_from = math.radians(latlon_from[1])
     lat_to = math.radians(latlon_to[0])
-    lon_to = math.radians(latlon_to[1]])
+    lon_to = math.radians(latlon_to[1])
 
     lat_difference = lat_from - lat_to #緯度差
     lon_difference = lon_from - lon_to #経度差
@@ -75,10 +76,10 @@ while True:
     else:
         quality = gps0.pos_quality
 
-    qualtytext.set_text('GPS Quality: ' + str(quality))
+    qualitytext.set_text('GPS Quality: ' + str(quality))
 
     #時間表示
-    timetext.set_time('Time: ' + str(gps0.gps_time))
+    timetext.set_text('Time: ' + str(gps0.gps_time))
 
     #速度表示
     if len(gps0.speed) > 0 and str(gps0.pos_quality) != 'NO signal':
